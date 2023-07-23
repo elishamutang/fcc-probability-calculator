@@ -12,7 +12,7 @@ class Hat:
 
     def draw(self, balls_drawn): #Method used to draw/remove balls at random from contents variable
         self.balls_drawn = int(balls_drawn) #Should receive an integer
-        if self.balls_drawn < len(self.contents):
+        if self.balls_drawn <= len(self.contents):
             self.sample_list = random.sample(self.contents, k=balls_drawn)
             return self.sample_list
         else:
