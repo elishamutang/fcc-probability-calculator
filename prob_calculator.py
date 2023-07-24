@@ -14,7 +14,9 @@ class Hat:
         self.balls_drawn = int(balls_drawn) #Should receive an integer
         if self.balls_drawn <= len(self.contents):
             self.sample_list = random.sample(self.contents, k=balls_drawn)
-            return self.sample_list
+            for x in self.sample_list:
+                self.contents.remove(x)
+            return self.contents
         else:
             return self.contents
         
