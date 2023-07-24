@@ -8,7 +8,7 @@
             "name": "main",
             "type": "python",
             "request": "launch",
-            "program": "C:\\Users\\acer\\OneDrive - Curtin University of Technology Australia\\Desktop\\Road to Full Stack\\VS Code\\fcc-probability-calculator\\fcc-probability-calculator\\main.py",
+            "program": "C:\\Users\\acer\\OneDrive - Curtin University of Technology Australia\\Desktop\\Road to Full Stack\\VS Code\\fcc-probability-calculator\\main.py",
             "console": "integratedTerminal",
             "justMyCode": true
         }

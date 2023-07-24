@@ -25,5 +25,8 @@ class Hat:
         return f"{self.contents}"
 
 
-def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
-    pass
+def experiment(hat, expected_balls):
+    
+    copied_hat = copy.copy(hat)
+    expected_balls = Hat(expected_balls)
+    print(expected_balls)
