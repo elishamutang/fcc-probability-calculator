@@ -4,9 +4,8 @@ import random
 class Hat:
 
     def __init__(self, **kwargs): 
-        self.kwargs = kwargs
         self.contents = []
-        for k,v in self.kwargs.items():
+        for k,v in kwargs.items():
             for color in range(0, v):
                 self.contents.append(k)
 
@@ -14,9 +13,8 @@ class Hat:
         self.balls_drawn = int(balls_drawn) #Should receive an integer
         if self.balls_drawn <= len(self.contents):
             self.sample_list = random.sample(self.contents, k=balls_drawn)
-            for x in self.sample_list:
-                print(x)
-                self.contents.remove(x)
+            for ball in self.sample_list:
+                self.contents.remove(ball)
             return self.contents
         else:
             return self.contents
@@ -24,9 +22,8 @@ class Hat:
     def __str__(self):
         return f"{self.contents}"
 
-
-def experiment(hat, expected_balls):
+def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     
     copied_hat = copy.copy(hat)
-    expected_balls = Hat(expected_balls)
-    print(expected_balls)
+    balls = expected_balls
+    return balls
