@@ -9,13 +9,13 @@ class Hat:
             for color in range(0, v):
                 self.contents.append(k)
 
-    def draw(self, balls_drawn): #Method used to draw/remove balls at random from contents variable
-        self.balls_drawn = int(balls_drawn) #Should receive an integer
+    def draw(self, balls_drawn):
+        self.balls_drawn = int(balls_drawn)
         if self.balls_drawn <= len(self.contents):
             self.sample_list = random.sample(self.contents, k=balls_drawn)
             for ball in self.sample_list:
                 self.contents.remove(ball)
-            return self.contents
+            return self.sample_list
         else:
             return self.contents
         
@@ -23,7 +23,18 @@ class Hat:
         return f"{self.contents}"
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+
+    M = 0 #how many times you get at least two red balls and one green ball
+    N = num_experiments
+    balls_expect = Hat(**expected_balls) #Unpack dictionary using ** to pass into Hat class.
+
+    start = copy.deepcopy(hat.contents)
+    experiment_draw = hat.draw(num_balls_drawn)
+    print(experiment_draw)
+
     
-    copied_hat = copy.copy(hat)
-    balls = expected_balls
-    return balls
+    
+
+    
+    return
+
